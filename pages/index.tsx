@@ -4,11 +4,6 @@ import { PostCard, Categories, PostWidget } from '../components'
 import { getPosts } from '../services'
 import { VFC } from 'react'
 
-// const posts = [
-//   { title: 'React testing', excerpt: 'Learn React Testing' },
-//   { title: 'React with Tailwind', excerpt: 'Learn React with Tailwind' },
-// ]
-
 export interface Item {
   title: string
   excerpt: string
