@@ -18,6 +18,7 @@ const PostCard: FC<IProps> = ({ post }) => {
           className="object-top absolute h-80 w-full object-fill shadow-lg rounded-t-lg lg:rounded-lg"
         />
       </div>
+      <h1 className="transition duration-700"></h1>
     </div>
   )
 }
