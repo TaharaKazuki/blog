@@ -1,14 +1,23 @@
 import React, { FC } from 'react'
+import moment from 'moment'
+import Link from 'next/link'
 
 interface IProps {
-  post: { title: string; excerpt: string }
+  post: any
 }
 
-const PostCard: FC<IProps> = ({ post: { title, excerpt } }) => {
+const PostCard: FC<IProps> = ({ post }) => {
+  console.info(post)
+
   return (
-    <div>
-      {title}
-      {excerpt}
+    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
+      <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+        <img
+          src={post.featuredImage.url}
+          alt={post.title}
+          className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+        />
+      </div>
     </div>
   )
 }
