@@ -18,7 +18,9 @@ const PostCard: FC<IProps> = ({ post }) => {
           className="object-top absolute h-80 w-full object-fill shadow-lg rounded-t-lg lg:rounded-lg"
         />
       </div>
-      <h1 className="transition duration-700"></h1>
+      <h1 className="transition duration-100 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
+        <Link href={`post/${post.slug}`}>{post.title}</Link>
+      </h1>
     </div>
   )
 }
