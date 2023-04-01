@@ -21,6 +21,7 @@ export default function Home() {
           href="/favicon.ico"
         />
       </Head>
+      <h1 className="text-gray-500 font-medium">sample code</h1>
     </>
   )
 }
