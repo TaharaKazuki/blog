@@ -1,9 +1,21 @@
-import { Inter } from "next/font/google"
+import type { NextPage } from "next"
 import Head from "next/head"
 
-const inter = Inter({ subsets: ["latin"] })
+import { getAllPosts } from "@/lib/notionAPI"
+import type { Props } from "@/types"
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const allPosts = await getAllPosts()
+
+  return {
+    props: {
+      allPosts,
+    },
+    revalidate: 60,
+  }
+}
+
+const Home: NextPage<Props> = ({ allPosts }) => {
   return (
     <>
       <Head>
@@ -21,7 +33,8 @@ export default function Home() {
           href="/favicon.ico"
         />
       </Head>
-      <h1 className="text-gray-500 font-medium">sample code</h1>
     </>
   )
 }
+
+export default Home
