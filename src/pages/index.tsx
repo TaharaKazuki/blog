@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
 }
 
 const Home: NextPage<Props> = ({ allPosts }) => {
+  console.info(allPosts)
   return (
     <>
       <Head>
